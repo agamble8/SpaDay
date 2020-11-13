@@ -1,0 +1,25 @@
+﻿
+<form method="post" action="/user/submit">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input name="username" type="text" value="@ViewBag.username"/>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input name="email" type="email" value="@ViewBag.email" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+    </div>
+    <div class="form-group">
+        <label for="verify">Re-enter password</label>
+        <input name="verify" type="password" />
+    </div>
+    <input type="submit" value="Add User" />
+
+</form>
+@if (ViewBag.error != null)
+{
+    <div>@ViewBag.error</div>
+}
